@@ -1,9 +1,6 @@
 #\\\IMPORTS///
 import re 
 
-
-text = "This is text with a ![rick roll](https://i.imgur.com/aKaOqIh.gif) and ![obi wan](https://i.imgur.com/fJRm4Vk.jpeg)"
-
 def extract_markdown_images(text):
     
     matches_images = re.findall(r'!\[([^\[\]]*)\]\(([^\(\)]*)\)', text)

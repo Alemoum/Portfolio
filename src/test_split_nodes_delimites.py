@@ -1,6 +1,6 @@
 #\\\IMPORTS///
 import unittest
-from split_nodes_delimites import split_nodes_delimiter
+from split_nodes import split_nodes_delimiter, split_nodes_image, split_nodes_link
 from textnode import TextNode, TextType
 
 class TestSplitNodesDelimiter(unittest.TestCase):
@@ -39,5 +39,26 @@ class TestSplitNodesDelimiter(unittest.TestCase):
         node = TextNode("This text has **unclosed delimiter", TextType.TEXT)
         # Test that your function raises
     
+    def test_split_nodes_image_no_images(self):
+        node = TextNode("This is text with no images", TextType.TEXT)
+        result = split_nodes_image([node])
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0].text, "This is text with no images")
+        self.assertEqual(result[0].text_type, TextType.TEXT)
+    
+    def test_split_nodes_image_one_image(self):
+        node = TextNode(
+            "This is text with an ![image](https://example.com/image.png)",
+            TextType.TEXT,
+        )
+        result = split_nodes_image([node])
+        self.assertEqual(len(result), 2)
+        self.assertEqual(result[0].text, "This is text with an ")
+        self.assertEqual(result[0].text_type, TextType.TEXT)
+        self.assertEqual(result[1].text, "image")
+        self.assertEqual(result[1].text_type, TextType.IMAGE)
+        self.assertEqual(result[1].url, "https://example.com/image.png")
+    
+                         
 if __name__ == "__main__":
     unittest.main() 

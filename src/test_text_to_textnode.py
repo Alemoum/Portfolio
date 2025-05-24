@@ -55,6 +55,6 @@ class TestTextToTextNode(unittest.TestCase):
                              TextNode("bold text", TextType.BOLD),
                              TextNode("italic text", TextType.ITALIC)
                          ])
-        print(sentence)
+
 if __name__ == "__main__":
     unittest.main() 

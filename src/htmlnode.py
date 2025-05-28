@@ -11,8 +11,17 @@ class HTMLNode():
     # Child classes will override this method to render themselves as HTML
     def to_html(self):
         
-        raise NotImplementedError
-    
+        if self.children:
+            child_html_list = [child.to_html() for child in self.children]
+            children_html = "".join(child_html_list)
+            return f"<{self.tag}{self.props_to_html()}>{children_html}</{self.tag}>"
+        
+        elif self.value:
+            return f"<{self.tag}{self.props_to_html()}>{self.value}</{self.tag}>"
+        
+        else:
+            return ""
+        
     # Return a string that represents the HTML attributes of the node
     def props_to_html(self):
         

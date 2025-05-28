@@ -3,10 +3,7 @@ from textnode import TextNode, TextType
 from extract_markdown import extract_markdown_images, extract_markdown_links
 
 
-node = TextNode(
-    "This is text with a link [**to boot dev**](https://www.boot.dev) and [to youtube](https://www.youtube.com/@bootdotdev)",
-    TextType.TEXT,
-)
+
 
 def split_nodes_delimiter(old_nodes, delimiter, text_type):
     
@@ -110,5 +107,3 @@ def split_nodes_image(old_nodes):
     
     return result
     
-
-print(split_nodes_link([node]))

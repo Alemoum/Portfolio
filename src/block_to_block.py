@@ -1,4 +1,5 @@
 from enum import Enum
+import re
 
 class BlockType(Enum):
     PARAGRAPH = "paragraph"
@@ -22,7 +23,7 @@ def block_to_block_type(block):
     lines = block.split('\n')
     
     quote_block = all(line.startswith("> ") for line in lines)
-    unordered_list_block = all(line.startswith("- ") for line in lines)
+    unordered_list_block = all(re.match(r"^\s*[-*+][.\s]+", line) for line in lines)
     ordered_list_block = all(line.startswith(f"{index}. ") for index, line in enumerate(lines, start=1))
     
     if quote_block == True:

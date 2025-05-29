@@ -1,6 +1,6 @@
 #\\\IMPORTS///
 import unittest
-from block_to_block import block_to_block_type, BlockType
+from block_to_block_type import block_to_block_type, BlockType
 
 class TestBlockToBlock(unittest.TestCase):
     

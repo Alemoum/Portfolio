@@ -1,6 +1,6 @@
 #\\\IMPORTS///
 import unittest
-from markdown_htmlnode import markdown_to_htmlnode
+from markdown_to_html_node import markdown_to_htmlnode, extract_title
 from htmlnode import HTMLNode
 class TestMarkdownHTMLNode(unittest.TestCase):
     def test_paragraphs(self):
@@ -75,7 +75,7 @@ class TestMarkdownHTMLNode(unittest.TestCase):
     def test_quote_block(self):
         md = """
         > This is a quote with **bold**
-        > and _italic_ text
+        >and _italic_ text
         """
         
         node = markdown_to_htmlnode(md)
@@ -83,7 +83,16 @@ class TestMarkdownHTMLNode(unittest.TestCase):
         self.assertEqual(html,
                          "<div><blockquote>This is a quote with <b>bold</b> and <i>italic</i> text</blockquote></div>"
                          )
+    
+    def test_extract_title(self):
+        md = """
+                   # This should be the head
+                     # This shouldn't
+        """
         
+        self.assertEqual(extract_title(md),
+                         "This should be the head"
+                         )
     
 if __name__ == "__main__":
     unittest.main()

@@ -1,6 +1,6 @@
 #\\\IMPORTS///
 from markdown_to_blocks import markdown_to_blocks
-from block_to_block import block_to_block_type,BlockType
+from block_to_block_type import block_to_block_type,BlockType
 from htmlnode import HTMLNode
 from text_to_textnode import text_to_textnode
 from text_to_html import text_node_to_html_node
@@ -8,6 +8,7 @@ from textnode import TextNode, TextType
 import re
 
 def text_to_children(text):
+    
         html_nodes = []
         list_of_text_nodes = text_to_textnode(text)
         for text_node in list_of_text_nodes:
@@ -93,3 +94,23 @@ def markdown_to_htmlnode(markdown):
     
     main_node = HTMLNode("div", None, list_of_nodes)
     return main_node
+
+def extract_title(markdown):
+    
+    list_of_lines = markdown.split("\n")
+    header_text = ""
+    
+    
+    for line in list_of_lines:
+        
+        striped_line = line.strip()
+        
+        if striped_line.startswith("# "):
+            
+            header_text += striped_line[2:]
+            break
+        
+    if header_text == "":
+        raise Exception("There's no h1 header")
+    
+    return header_text

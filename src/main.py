@@ -100,12 +100,12 @@ def main():
     if len(sys.argv) > 1:
         base_path = sys.argv[1]
         copy_directory()
-        generate_page(base_path, "template.html", "docs/index.html", base_path)
-        generate_pages_recursive(base_path, "template.html", "docs", base_path)
+        generate_page("content/index.md", "template.html", "docs/index.html", base_path)
+        generate_pages_recursive("content", "template.html", "docs", base_path)
     else:
         base_path = "/"
         copy_directory()
-        generate_page("content/index.html", "template.html", "docs/index.html", base_path)
+        generate_page("content/index.md", "template.html", "docs/index.html", base_path)
         generate_pages_recursive("content", "template.html", "docs", base_path)
     
     

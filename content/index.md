@@ -1,4 +1,4 @@
-# Tolkien Fan Club
+# Marcos V. M. Martins
 
 ![JRR Tolkien sitting](/images/tolkien.png)
 

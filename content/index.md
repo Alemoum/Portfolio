@@ -10,9 +10,9 @@ Here's the deal, **I like Tolkien**.
 
 ## Blog posts
 
-- [Why Glorfindel is More Impressive than Legolas](/blog/glorfindel)
-- [Why Tom Bombadil Was a Mistake](/blog/tom)
-- [The Unparalleled Majesty of "The Lord of the Rings"](/blog/majesty)
+- [Linkedin](https://www.linkedin.com/in/marcos-victor-muller-martins-7193b4289/)
+- [Github.com](https://github.com/Alemoum)
+- [Curriculum](/blog/majesty)
 
 ## Reasons I like Tolkien
 

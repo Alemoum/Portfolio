@@ -1,14 +1,8 @@
 # Marcos V. M. Martins
 
-![JRR Tolkien sitting](/images/tolkien.png)
+**Working my way toward becoming a back-end developer.**
 
-Here's the deal, **I like Tolkien**.
-
-> "I am in fact a Hobbit in all but size."
->
-> -- J.R.R. Tolkien
-
-## Blog posts
+## My links
 
 - [Linkedin](https://www.linkedin.com/in/marcos-victor-muller-martins-7193b4289/)
 - [Github.com](https://github.com/Alemoum)

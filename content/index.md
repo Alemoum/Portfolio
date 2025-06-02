@@ -4,9 +4,9 @@
 
 #### My links
 
- ![Linkedin icon](/images/linkedin_icon.png) [Linkedin](https://www.linkedin.com/in/marcos-victor-muller-martins-7193b4289/)\n
- ![Github icon](/images/github.png) [Github](https://github.com/Alemoum)
- [Curriculum](/blog/majesty)
+ . ![Linkedin icon](/images/linkedin_icon.png) [Linkedin](https://www.linkedin.com/in/marcos-victor-muller-martins-7193b4289/)
+ . ![Github icon](/images/github.png) [Github](https://github.com/Alemoum)
+ . [Curriculum](/blog/majesty)
 
 #### Reasons I like Tolkien
 

@@ -95,9 +95,6 @@ blockquote {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 0px;
-  
-  box-shadow: 3px 3px 6px #000;
 }
 
 ::-webkit-scrollbar {

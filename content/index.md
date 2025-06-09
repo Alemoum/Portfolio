@@ -4,7 +4,7 @@
 
 #### My links
 
- - ![Linkedin icon](/images/linkedin_icon.png) [Linkedin](https://www.linkedin.com/in/marcos-victor-muller-martins-7193b4289/)
+ - ![Linkedin icon](/images/linkedin_icon.png) [Linkedin](https://www.linkedin.com/in/marcosvmmartins/)
  - ![Github icon](/images/github.png) [Github](https://github.com/Alemoum)
  - [Curriculum](/blog/curriculum/curriculum)
 
